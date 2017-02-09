@@ -1,0 +1,183 @@
+\documentclass{beamer}
+
+
+\usepackage[semibold]{raleway} % Use raleway font for \sffamily
+\usepackage[protrusion=true,expansion=true,kerning=true,spacing=true,tracking=true,final]{microtype}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[outputdir=build]{minted} % for code highlighting
+\usemintedstyle{igor}
+
+
+\mode<presentation> {%
+\usetheme{simple} % choose simple theme
+}
+
+
+%-----------------------------------------------------------------------------
+%	TITLE PAGE
+%-----------------------------------------------------------------------------
+\setwatermark[hoffset=6.75cm,voffset=7.65cm]{\includegraphics[height=1.50cm]{Rockin_R_Initials-4C.png}}
+
+\title[Thesis with \LaTeX]{Writing a Masters Thesis with \LaTeX} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{%
+  Guillermo Garza\\[2pt]% Your name
+ \footnotesize\textit{guillermo.garza@utrgv.edu} % Your email address
+}
+
+\institute[UTRGV] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{The University of Texas Rio Grande Valley}
+
+\date{February 9, 2017} % Date, can be changed to a custom date
+
+
+\begin{document}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\setwatermark[hoffset=0cm,voffset=8.25cm]{\includegraphics[height=0.9cm]{Rockin_R_Initials-4C.png}}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%------------------------------------------------
+\section{Getting Started with \LaTeX}
+%------------------------------------------------
+
+\begin{frame}
+  \frametitle{Quickstart}
+
+  The easiest way to get started with \LaTeX{} is by signing up with a service
+  such as Overleaf or Sharelatex.
+
+  \begin{itemize}
+    \item \url{www.overleaf.com}
+    \item \url{www.sharelatex.com}
+  \end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------
+\section{UTRGV Thesis Template}
+\begin{frame}
+  \frametitle{UTRGV Thesis Template}
+  The UTRGV Thesis Template is available at
+  \url{https://github.com/UTRGV-SMSS/Thesis-Template}\\
+
+  Download the zip file from there.  If you are using a service such
+  as Overleaf,  upload the zip file to create a new project.
+
+  \begin{itemize}
+      \item
+        Backup your files regularly.
+      \item
+        Redownload the template and update
+        the UTRGVthesis.cls file before you submit your thesis for review.
+      \item
+        Report any issues you have with the template on that website.
+      \item
+        Get help from us.
+  \end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------
+\section{Useful References}
+\begin{frame}
+  \frametitle{Useful References}
+
+
+  \begin{itemize}
+    \item
+      Cheatsheet
+      \url{http://joshua.smcvt.edu/undergradmath/undergradmath.pdf}
+
+    \item
+      The Short Math Guide for \LaTeX{}\\
+      \url{http://tex.loria.fr/general/downes-short-math-guide.pdf}\\
+      is a good reference for typesetting math.
+
+    \item
+      \LaTeX{} Wikibook\\
+      \url{https://en.wikibooks.org/wiki/LaTeX}
+
+      \item
+        Google and StackOverflow (prepend the word ``Latex'' to your search)
+  \end{itemize}
+
+\end{frame}
+
+
+%------------------------------------------------
+\section{Creating Tables}
+\begin{frame}
+  \frametitle{Creating Tables}
+
+  Use the following website to generate \LaTeX{} tables:
+  \url{http://www.tablesgenerator.com}\\
+
+  My workflow is to keep an Excel file of table data. I copy that into the
+  website, by clicking ``File'' then ``Paste Table Data''.\\
+
+  It is a good idea to use the ``booktabs'' style.
+
+
+\end{frame}
+
+
+%------------------------------------------------
+\section{Thesis Template with LyX}
+\begin{frame}[fragile]{Thesis Template with LyX}
+
+  We've created a rudimentary template LyX thesis template,
+  that does not have many features, but can be used together with the
+  thesis template.
+
+  \url{https://github.com/UTRGV-SMSS/LyX_Thesis_Template}\\
+
+  \begin{enumerate}
+      \item
+        Download and use LyX Thesis Template to write your thesis.
+      \item
+        Download the \LaTeX{} UTRGV Thesis Template.
+      \item
+        Export your LyX document to plain \LaTeX{} and move this file
+        to the \LaTeX{} UTRGV Thesis Template Directory.
+      \item
+        Add \verb|\usepackage{docmute}| to preamble of ``main.tex'' file.
+      \item
+        Use the \verb|\input{}| command to include your document in the
+        ``main.tex'' file.
+
+  \end{enumerate}
+\end{frame}
+
+%------------------------------------------------
+\section{Bibliography Management}
+\begin{frame}[fragile]{Bibliography Management}
+  The thesis template has a file ``references.bib'' you can use
+  to manage your bibliographic references. This file is in the BibTeX format.
+  \url{https://en.wikipedia.org/wiki/BibTeX}\\
+
+  You can populate this file by searching on Google Scholar and
+  clicking on the ``cite'' link below a search result to get the proper
+  BibTeX-formatted entry.\\
+
+  Entries in file can then be referenced in your paper using
+  the \verb|\cite| command.
+
+
+\end{frame}
+
+\end{document}
