@@ -1,6 +1,7 @@
 \documentclass{beamer}
 
-
+%\usepackage{handoutWithNotes}
+%\pgfpagesuselayout{3 on 1 with notes}[letterpaper,border shrink=5mm]
 \usepackage[semibold]{raleway} % Use raleway font for \sffamily
 \usepackage[protrusion=true,expansion=true,kerning=true,spacing=true,tracking=true,final]{microtype}
 \usepackage{graphicx} % Allows including images
@@ -29,7 +30,7 @@
 \institute[UTRGV] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {The University of Texas Rio Grande Valley}
 
-\date{February 9, 2017} % Date, can be changed to a custom date
+\date{\today} % Date, can be changed to a custom date
 
 
 \begin{document}
@@ -50,18 +51,52 @@
 %----------------------------------------------------------------------------
 %	PRESENTATION SLIDES
 %------------------------------------------------
+
+\section{What is \LaTeX{} and Why Should I Use It?}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{What is \LaTeX{} and\\ Why Should I Use It?}
+
+\begin{itemize}
+  \item
+    \LaTeX{} is a \textbf{typesetting language}.  It is used to prepare all sorts of
+    documents.
+  \item
+    It is the standard language use by nearly all mathematicians.
+  \item
+     When used properly, it separates content and style.
+\end{itemize}
+
+
+\end{frame}
+
+
+
 \section{Getting Started with \LaTeX}
 %------------------------------------------------
 
 \begin{frame}
-  \frametitle{Quickstart}
+\frametitle{Getting Started with \LaTeX}
+%------------------------------------------------
 
   The easiest way to get started with \LaTeX{} is by signing up with a service
   such as Overleaf or Sharelatex.
 
   \begin{itemize}
-    \item \url{www.overleaf.com}
-    \item \url{www.sharelatex.com}
+    \item
+      \href{http://www.overleaf.com}{www.overleaf.com}
+    \item
+      \href{http://www.sharelatex.com}{www.sharelatex.com}
+  \end{itemize}
+
+  For faster compilation, download a \LaTeX{} distribution such as TeX Live.
+  Along with a \LaTeX{} editor such as TeXworks.
+  \begin{itemize}
+    \item
+      \href{http://www.tug.org/texlive/}{www.tug.org/texlive/}
+    \item
+      \href{http://www.tug.org/texworks/}{www.tug.org/texworks/}
   \end{itemize}
 
 \end{frame}
@@ -100,6 +135,14 @@
 
   \begin{itemize}
     \item
+      Introduction to \LaTeX{} on YouTube from GVSU Math\\
+      \url{https://youtu.be/cTEfw-jUqAg}
+
+    \item
+      \LaTeX{} Wikibook\\
+      \url{https://en.wikibooks.org/wiki/LaTeX}
+
+    \item
       Cheatsheet
       \url{http://joshua.smcvt.edu/undergradmath/undergradmath.pdf}
 
@@ -108,9 +151,6 @@
       \url{http://tex.loria.fr/general/downes-short-math-guide.pdf}\\
       is a good reference for typesetting math.
 
-    \item
-      \LaTeX{} Wikibook\\
-      \url{https://en.wikibooks.org/wiki/LaTeX}
 
       \item
         Google and StackOverflow (prepend the word ``Latex'' to your search)
@@ -170,7 +210,7 @@
   to manage your bibliographic references. This file is in the BibTeX format.
   \url{https://en.wikipedia.org/wiki/BibTeX}\\
 
-  You can populate this file by searching on Google Scholar and
+  You can populate this file by searching on Google Scholar or MathSciNet and
   clicking on the ``cite'' link below a search result to get the proper
   BibTeX-formatted entry.\\
 
@@ -178,6 +218,15 @@
   the \verb|\cite| command.
 
 
+\end{frame}
+
+
+\section{Most Important Tip}
+\begin{frame}
+\frametitle{Most Important Tip}
+{\LARGE\centering
+    Focus on the content of your paper!!! \\
+}
 \end{frame}
 
 \end{document}
